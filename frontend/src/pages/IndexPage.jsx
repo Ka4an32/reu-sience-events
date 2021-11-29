@@ -1,7 +1,9 @@
+import IndexPromoComponent from '../component/IndexPromoComponent/IndexPromoComponent';
+
 function IndexPage() {
   return (
     <div>
-      IndexPage
+      <IndexPromoComponent />
     </div>
   );
 }

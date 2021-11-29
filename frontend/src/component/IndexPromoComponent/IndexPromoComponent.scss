@@ -1,0 +1,52 @@
+.main-promo-block{
+    width: 100vw;
+    height: 100vh;
+    box-shadow: inset 0px 4px 100px rgba(0, 0, 0, 0.03);
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../assets/image/main-promo/main_background.jpg);
+        opacity: .07;
+        z-index: -1;
+    }
+
+    header{
+        .logo-block{
+            display: inline-flex;
+            align-items: center;
+            margin: 20px 0 0 30px;
+            position: absolute;
+            &__text{
+                display: flex;
+                flex-direction: column;
+                background-color: rgba($color: #FFF, $alpha: .6);
+                padding: 12px 10px;
+                overflow: hidden;
+                span{
+                    animation: onLoadViewLogoText .8s;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #1B2A4E;
+                }
+            }
+        }
+    }
+    .promo-content{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+    }
+}
+
+@keyframes onLoadViewLogoText {
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
