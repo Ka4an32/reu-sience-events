@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 // STYLE
 import './IndexPromoComponent.scss';
 
@@ -10,8 +12,13 @@ import MenuListData from '../../common/menu-list.json';
 // console.log(MenuList);
 
 function IndexPromoComponent() {
+  let [scroll, setScroll] = useState(0);
+  window.onscroll = () => {
+    scroll = setScroll(window.scrollY);
+  };
+
   return (
-    <div className='main-promo-block'>
+    <div className='main-promo-block' style={{top: `${scroll*0.5}px`}}>
       <header>
         <div className='logo-block'>
           <img src={reuLogo} alt="REU" />
@@ -23,7 +30,7 @@ function IndexPromoComponent() {
         </div>
       </header>
       <main className='promo-content'>
-        <div className='promo-content__wrapper'>
+        <div className='promo-content__wrapper' style={{top: `${scroll*0.05}px`}}>
           <div className='head-title'>
             <h1 className='title'>
               <span className='sience'>НАУКА</span>

@@ -1,7 +1,9 @@
 .main-promo-block{
+    position: relative;
     width: 100vw;
     height: 100vh;
     box-shadow: inset 0px 4px 100px rgba(0, 0, 0, 0.03);
+    z-index: -1;
     &::before{
         content: '';
         position: absolute;
@@ -42,6 +44,7 @@
         align-items: center;
         justify-content: center;
         &__wrapper{
+            position: relative;
             display: flex;
             .head-title{
                 .title{
