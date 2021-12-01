@@ -8,8 +8,6 @@ import reuLogo from '../../assets/image/main-promo/reu_logo.png';
 
 // DATA
 import MenuListData from '../../common/menu-list.json';
-// const MenuList = JSON.parse(MenuListData);
-// console.log(MenuList);
 
 function IndexPromoComponent() {
   let [scroll, setScroll] = useState(0);
@@ -33,13 +31,13 @@ function IndexPromoComponent() {
         <div className='promo-content__wrapper' style={{top: `${scroll*0.05}px`}}>
           <div className='head-title'>
             <h1 className='title'>
-              <span className='sience'>НАУКА</span>
-              <span className='unite'>
+              <span className='sience sience-anim'>НАУКА</span>
+              <span className='unite unite-anim'>
                 ОБЪЕДИНЯЕТ
               </span>
               <div className='bottom-row'>
                 <span className='and'>И</span>
-                <span className='do-strong'>ДЕЛАЕТ НАС <br /> СИЛЬНЕЕ</span>
+                <span className='do-strong do-strong-anim'>ДЕЛАЕТ НАС <br /> СИЛЬНЕЕ</span>
               </div>
             </h1>
           </div>
