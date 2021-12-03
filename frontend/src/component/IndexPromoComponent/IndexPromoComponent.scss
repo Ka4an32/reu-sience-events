@@ -23,16 +23,17 @@
             margin: 20px 0 0 30px;
             position: absolute;
             &__text{
+                font-family: 'Roboto';
                 display: flex;
                 flex-direction: column;
                 background-color: rgba($color: #FFF, $alpha: .6);
                 padding: 12px 10px;
                 overflow: hidden;
                 span{
-                    animation: onLoadViewLogoText .8s;
+                    animation: onLoadViewLogoHeaderText .8s;
                     font-size: 14px;
                     line-height: 17px;
-                    color: #1B2A4E;
+                    color: #091228;
                 }
             }
         }
@@ -47,62 +48,70 @@
             position: relative;
             display: flex;
             .head-title{
+                color: #091228;
+                position: relative;
+                font-size: 5vw;
+                padding: .4em .5em;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($color: #FFF, $alpha: .1);
+                    backdrop-filter: blur(3px);
+                    z-index: 0;
+                }
                 .title{
-                    font-size: 10vw;
-                    font-weight: 800;
-                    color: #0F1A35;
-                    transition: all;
-                    .sience{
-                      line-height: .8em;
-                      display: block;
-                      font-size: 1em;
-                      background-color: white;
-                    }
-                    .unite{
-                        font-weight: 500;
-                        font-size: 0.576em;
-                        line-height: 1em;
-                        background-color: white;
-                    }
-                    .bottom-row{
-                        display: flex;
-                        margin-left: 1.05em;
-                        background-color: white;
-                        .and{
-                            font-weight: 600;
-                            line-height: .83em;
-                            font-size: .892em;
-                        }
-                        .do-strong{
-                            line-height: 1.1em;
-                            font-size: .338em;
-                        }
-                    }
-                }
-            }
-            .head-menu{
-                background-color: white;
-                width: 15.5vw;
-                padding: 10px 20px 20px 20px;
-                line-height: 165%;
-                font-size: 1vw;
-                overflow: visible;
-                .nav-menu{
-                    padding-left: 10px;
+                    position: relative;
+                    z-index: 1;
+                    font-size: inherit;
                     text-transform: uppercase;
-                    font-weight: 300;
-                    font-size: 1.1em;
-                    .menu-item{
-                        cursor: pointer;
-                        margin-bottom: 2px;
+                    font-weight: 200;
+                    span{
+                        opacity: 0;
+                        transition: all;
                     }
-                }
-                .text-block{
-                    font-size: 1.1em;
-                    color: #0F1A35;
-                    .greeting-text{
-                        min-width: 22.5vw;
-                        font-weight: 300;
+                    .light{
+                        display: block;
+                        font-size: 1em;
+                        line-height: .85em;
+                    }
+                    .bold{
+                        display: block;
+                        font-size: .39em;
+                        font-weight: 900;
+                        line-height: .9em;
+                    }
+
+                    .sience{
+                        animation: onLoadViewLogoText 2s forwards;
+                    }
+                    .and-reu{
+                        animation: onLoadViewLogoText 2s .3s forwards;
+                        .reu{
+                            font-weight: 900;
+                            animation: onLoadViewLogoText 2s .5s forwards;;
+                        }
+                    }
+                    .united{
+                        animation: onLoadViewLogoText 2s .6s forwards;
+                        margin: .6em 0;
+                    }
+                    .thousand{
+                        animation: onLoadViewLogoText 2s 1s forwards;
+                    }
+                    .brains{
+                        animation: onLoadViewLogoText 2s 1.3s forwards;
+                    }
+                    .in-good{
+                        animation: onLoadViewLogoText 2s 1.6s forwards;
+                        margin-top: .6em;
+                    }
+                    .light.bold{
+                        animation: onLoadViewLogoText 2s 2s forwards;
+                        display: inline-flex;
                     }
                 }
             }
@@ -110,11 +119,20 @@
     }
 }
 
-@keyframes onLoadViewLogoText {
+@keyframes onLoadViewLogoHeaderText {
     0%{
         transform: translateX(-150%);
     }
     100%{
         transform: translateX(0%);
+    }
+}
+
+@keyframes onLoadViewLogoText {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
