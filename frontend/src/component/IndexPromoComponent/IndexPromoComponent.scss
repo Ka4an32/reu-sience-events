@@ -1,138 +1,50 @@
-.main-promo-block{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    box-shadow: inset 0px 4px 100px rgba(0, 0, 0, 0.03);
+.main-promo-block {
+  position: relative;
+  // width: 100vw;
+  height: 100vh;
+  box-shadow: inset 0px 4px 100px rgba(0, 0, 0, 0.03);
+  z-index: -1;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/image/main-promo/main_background.jpg);
+    opacity: 0.07;
     z-index: -1;
-    &::before{
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(../../assets/image/main-promo/main_background.jpg);
-        opacity: .07;
-        z-index: -1;
-    }
+  }
 
-    header{
-        .logo-block{
-            display: inline-flex;
-            align-items: center;
-            margin: 20px 0 0 30px;
-            position: absolute;
-            &__text{
-                font-family: 'Roboto';
-                display: flex;
-                flex-direction: column;
-                background-color: rgba($color: #FFF, $alpha: .6);
-                padding: 12px 10px;
-                overflow: hidden;
-                span{
-                    animation: onLoadViewLogoHeaderText .8s;
-                    font-size: 14px;
-                    line-height: 17px;
-                    color: #091228;
-                }
-            }
-        }
-    }
-    .promo-content{
-        width: 100vw;
-        height: 100%;
+  header {
+    .logo-block {
+      display: inline-flex;
+      align-items: center;
+      margin: 20px 0 0 30px;
+      position: absolute;
+      background-color: rgba($color: #fff, $alpha: 0.6);
+      &__text {
+        font-family: "Roboto";
         display: flex;
-        align-items: center;
-        justify-content: center;
-        &__wrapper{
-            position: relative;
-            display: flex;
-            .head-title{
-                color: #091228;
-                position: relative;
-                font-size: 5vw;
-                padding: .4em .5em;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba($color: #FFF, $alpha: .1);
-                    backdrop-filter: blur(3px);
-                    z-index: 0;
-                }
-                .title{
-                    position: relative;
-                    z-index: 1;
-                    font-size: inherit;
-                    text-transform: uppercase;
-                    font-weight: 200;
-                    span{
-                        opacity: 0;
-                        transition: all;
-                    }
-                    .light{
-                        display: block;
-                        font-size: 1em;
-                        line-height: .85em;
-                    }
-                    .bold{
-                        display: block;
-                        font-size: .39em;
-                        font-weight: 900;
-                        line-height: .9em;
-                    }
-
-                    .sience{
-                        animation: onLoadViewLogoText 2s forwards;
-                    }
-                    .and-reu{
-                        animation: onLoadViewLogoText 2s .3s forwards;
-                        .reu{
-                            font-weight: 900;
-                            animation: onLoadViewLogoText 2s .5s forwards;;
-                        }
-                    }
-                    .united{
-                        animation: onLoadViewLogoText 2s .6s forwards;
-                        margin: .6em 0;
-                    }
-                    .thousand{
-                        animation: onLoadViewLogoText 2s 1s forwards;
-                    }
-                    .brains{
-                        animation: onLoadViewLogoText 2s 1.3s forwards;
-                    }
-                    .in-good{
-                        animation: onLoadViewLogoText 2s 1.6s forwards;
-                        margin-top: .6em;
-                    }
-                    .light.bold{
-                        animation: onLoadViewLogoText 2s 2s forwards;
-                        display: inline-flex;
-                    }
-                }
-            }
+        flex-direction: column;
+        padding: 12px 10px;
+        overflow: hidden;
+        span {
+          animation: onLoadViewLogoHeaderText 0.8s;
+          font-size: 14px;
+          line-height: 17px;
+          color: #091228;
         }
+      }
     }
+  }
 }
 
 @keyframes onLoadViewLogoHeaderText {
-    0%{
-        transform: translateX(-150%);
-    }
-    100%{
-        transform: translateX(0%);
-    }
-}
-
-@keyframes onLoadViewLogoText {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
