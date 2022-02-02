@@ -1,0 +1,39 @@
+header {
+  display: block;
+  .logo-block {
+    display: inline-flex;
+    align-items: center;
+    margin: 20px 0 0 20px;
+    // position: absolute;
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    &__text {
+      font-family: "Roboto";
+      display: flex;
+      flex-direction: column;
+      padding: 10px 10px 0px 10px;
+      overflow: hidden;
+      span {
+        animation: onLoadViewLogoHeaderText 0.8s 2.1s;
+        font-size: 14px;
+        line-height: 17px;
+        color: #091228;
+      }
+    }
+    &__filial {
+      display: inline-block;
+      font-size: 9px;
+      margin: 0px 10px;
+      margin-bottom: 3px;
+      border-bottom: 1px solid #a51a2f;
+    }
+  }
+}
+
+@keyframes onLoadViewLogoHeaderText {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
