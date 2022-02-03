@@ -1,32 +1,32 @@
 .tape-wrapper {
-  // background-color: white;
   height: 1500px;
-  margin: 25px 20px;
   margin-right: 0;
+  font-size: 0.015em;
   .tape {
+    margin-top: 25px;
     padding: 0 20px;
-    width: 100%;
+    box-sizing: border-box;
+    width: calc(100vw - 30px);
     height: 100%;
     display: flex;
     justify-content: space-between;
     .left-content {
-      width: 890px;
-      // background: white;
+      width: 70vw;
       .first-promo-row{
-        height: 360px;
+        height: 31vw;
         display: flex;
         .left-column{
-          width: 240px;
+          width: 27%;
           display: flex;
           flex-direction: column;
           .main-menu{
-            background-color: #FAF9F9;
+            background-color: #eee;
             width: 100%;
-            height: 240px;
+            height: 70%;
           }
           .reu-facts{
             margin-top: 15px;
-            background-color: #FAF9F9;
+            background-color: #eee;
             width: 100%;
             flex-grow: 1;
           }
@@ -34,11 +34,11 @@
         .right-column{
           flex-grow: 1;
           margin-left: 15px;
-          background-color: #FAF9F9;
+          background-color: #eee;
         }
       }
       .tape-content{
-        background-color: #FAF9F9;
+        background-color: #eee;
         height: 100%;
         margin-top: 15px;
       }
@@ -47,9 +47,10 @@
       position: -webkit-sticky;
       position: sticky;
       top: 50px;
-      width: 290px;
-      height: 635px;
-      background: #FAF9F9;
+      flex-grow: 1;
+      margin-left: 15px;
+      height: calc(100vh - 125px);
+      background: #b11111;
     }
   }
 }

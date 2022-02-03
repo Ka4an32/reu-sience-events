@@ -10,13 +10,16 @@ function IndexTapeComponent() {
             <div className='left-column'>
               <div className='main-menu'>
                 {/* main menu */}
+                main menu
               </div>
               <div className='reu-facts'>
                 {/* reu fatcts */}
+                reu facts
               </div>
             </div>
             <div className='right-column'>
               {/* slider */}
+              slider
             </div>
           </div>
           <div className='tape-content'>
