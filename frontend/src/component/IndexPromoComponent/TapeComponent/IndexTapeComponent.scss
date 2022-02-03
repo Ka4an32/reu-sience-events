@@ -11,7 +11,37 @@
     justify-content: space-between;
     .left-content {
       width: 890px;
-      background: white;
+      // background: white;
+      .first-promo-row{
+        height: 360px;
+        display: flex;
+        .left-column{
+          width: 240px;
+          display: flex;
+          flex-direction: column;
+          .main-menu{
+            background-color: #FAF9F9;
+            width: 100%;
+            height: 240px;
+          }
+          .reu-facts{
+            margin-top: 15px;
+            background-color: #FAF9F9;
+            width: 100%;
+            flex-grow: 1;
+          }
+        }
+        .right-column{
+          flex-grow: 1;
+          margin-left: 15px;
+          background-color: #FAF9F9;
+        }
+      }
+      .tape-content{
+        background-color: #FAF9F9;
+        height: 100%;
+        margin-top: 15px;
+      }
     }
     .right-bar {
       position: -webkit-sticky;
@@ -19,7 +49,7 @@
       top: 50px;
       width: 290px;
       height: 635px;
-      background: white;
+      background: #FAF9F9;
     }
   }
 }
