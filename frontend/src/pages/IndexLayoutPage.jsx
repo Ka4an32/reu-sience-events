@@ -4,6 +4,7 @@ import './IndexLayoutPage.scss';
 import MenuList from '../constants/menu-list.json';
 import PhoneList from '../constants/phone-list.json';
 import EmailList from '../constants/eMail-list.json';
+import AdresList from '../constants/adress-list.json';
 
 import { Link } from 'react-router-dom';
 
@@ -38,6 +39,18 @@ const renderEmailList = () => {
   );
 };
 
+const renderAdresList = () => {
+  return AdresList.map(({ adres }, index) => (
+    <div className='korpus' key={index}>
+      {`Корпус ${index + 1}:`}
+      <div className='adres'>
+        {adres}
+      </div>
+    </div>
+  ),
+  );
+};
+
 function IndexLayoutPage() {
   return (
     <div className='main-promo-block'>
@@ -57,18 +70,21 @@ function IndexLayoutPage() {
             <div className='arrow-border-block'>
               {renderPhoneList()}
             </div>
-            <div className='hr'/>
+            <div className='hr' />
             <div className='arrow-border-block'>
               {renderEmailList()}
             </div>
           </div>
         </div>
+
         <div className='block adres-block'>
           <h4 className='title'>
             Адрес
           </h4>
-          <div className='arrow-border-block'>
-            {renderPhoneList()}
+          <div className='border-block-wrapper'>
+            <div className='arrow-border-block'>
+              {renderAdresList()}
+            </div>
           </div>
         </div>
       </div>

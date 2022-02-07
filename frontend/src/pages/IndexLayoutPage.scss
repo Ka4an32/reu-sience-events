@@ -80,6 +80,19 @@
       border-left: 4px solid #cfcfcf;
       margin-top: 17px;
       margin-bottom: 17px;
+
+      .korpus{
+        margin: 10px 0;
+        font-size: 13px;
+        text-align: left;
+        color: #091228;
+        text-transform: uppercase;
+        .adres{
+          font-size: 12px;
+          text-transform: none;
+          color: #000;
+        }
+      }
     }
 
     .contact-block {
