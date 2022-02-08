@@ -6,7 +6,7 @@ import PhoneList from '../constants/phone-list.json';
 import EmailList from '../constants/eMail-list.json';
 import AdresList from '../constants/adress-list.json';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const renderPhoneList = () => {
@@ -27,14 +27,14 @@ const renderPhoneList = () => {
 const renderMenuList = () => {
   return MenuList.map((item, index) =>
     <li key={index}>
-      <Link to={item.path}>{item.title}</Link>
+      <NavLink activeClassName={'active'} to={item.path}>{item.title}</NavLink>
     </li>,
   );
 };
 
 const renderEmailList = () => {
   return EmailList.map(({ email }, index) => (
-    <a href={`mailto:${email}`} key={index}>{email}</a>
+    <a href={`mailto:${email}`} className={'mail'} key={index}>{email}</a>
   ),
   );
 };

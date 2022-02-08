@@ -1,18 +1,18 @@
 [
   {
     "title" : "Главная",
-    "path" : ""
+    "path" : "/"
   },
   {
     "title" : "Новости",
-    "path" : ""
+    "path" : "/news"
   },
   {
     "title" : "Связаться",
-    "path" : ""
+    "path" : "/call"
   },
   {
     "title" : "Галерея",
-    "path" : ""
+    "path" : "/gallery"
   }
 ]

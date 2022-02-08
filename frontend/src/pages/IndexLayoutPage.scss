@@ -7,7 +7,6 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding-right: 160px;
-  z-index: -1;
   &::before {
     content: "";
     position: absolute;
@@ -55,7 +54,30 @@
         font-weight: 300;
         font-size: 14px;
         line-height: 16px;
+        .active {
+          &::after {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #091228;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -12px;
+          }
+        }
         a {
+          position: relative;
+          &:hover::after {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #a51a2f;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -12px;
+          }
           color: #091228;
         }
         li {
@@ -64,11 +86,11 @@
         }
       }
     }
-    .border-block-wrapper{
+    .border-block-wrapper {
       margin: 0 27px 0 23px;
-      .hr{
+      .hr {
         height: 1px;
-        background-color: #E5E5E5;
+        background-color: #e5e5e5;
       }
     }
     .arrow-border-block {
@@ -81,16 +103,20 @@
       margin-top: 17px;
       margin-bottom: 17px;
 
-      .korpus{
-        margin: 10px 0;
+      .korpus {
+        &:first-child {
+          margin-bottom: 10px;
+        }
+        font-weight: 500;
         font-size: 13px;
         text-align: left;
         color: #091228;
         text-transform: uppercase;
-        .adres{
+        .adres {
           font-size: 12px;
           text-transform: none;
           color: #000;
+          font-weight: 300;
         }
       }
     }
@@ -99,6 +125,9 @@
       padding-top: 19px;
       margin-top: 16px;
       .arrow-border-block {
+        .mail {
+          font-size: 14px;
+        }
         a {
           display: block;
           font-weight: 700;
