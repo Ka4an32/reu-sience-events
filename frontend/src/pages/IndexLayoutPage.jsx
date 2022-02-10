@@ -31,7 +31,14 @@ function IndexLayoutPage() {
       <div className='content-wrapper'>
         <div className='static-block'>
           <div className='block working-arrow'>
-            {/*  */}
+            <h3 className='title'>
+              <span className='first-row'>
+                направление
+              </span>
+              <span className='second-row'>
+                работы
+              </span>
+            </h3>
           </div>
           <div className='block strategy'>
             {/*  */}

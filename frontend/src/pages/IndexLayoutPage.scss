@@ -43,6 +43,37 @@
       .working-arrow {
         grid-column: 1;
         grid-row: 1 / 4;
+        .title {
+          margin-top: 10px;
+          padding: 3px 0;
+          padding-left: 7px;
+          display: inline-flex;
+          flex-direction: column;
+          border-left: 4px solid #a51a2f;
+          text-transform: uppercase;
+          color: #091228;
+          position: relative;
+
+          &::after{
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            bottom: 6px;
+            right: 12px;
+            background-color: #CFCFCF;
+          }
+
+          .first-row {
+            font-weight: 300;
+            font-size: 14px;
+          }
+
+          .second-row{
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
       }
 
       .strategy {
@@ -66,7 +97,7 @@
       }
     }
 
-    .sticky-block{
+    .sticky-block {
       position: sticky;
       top: 20px;
       height: 90vh;
